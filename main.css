@@ -1,0 +1,48 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    padding: 20px;
+    user-select: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+#sentence .letter {
+    position: static;
+}
+
+.letter {
+    cursor: default;
+    position: absolute;
+    z-index: 2;
+}
+
+.letter.empty {
+    color: rgba(0, 0, 0, 0);
+}
+
+.letter.active {
+    background-color: rgba(255, 0, 0, 0.397);
+}
+
+.letter.current {
+    z-index: 3;
+}
+
+#selecting-area {
+    position: absolute;
+    background: rgb(34, 91, 199);
+    opacity: .65;
+    left: -9999px;
+    top: -9999px;
+    z-index: 2;
+}
