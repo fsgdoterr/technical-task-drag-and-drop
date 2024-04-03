@@ -306,8 +306,6 @@ const trimOriginalText = () => {
     const clearLetters = trim(letters);
     const removedLetters = letters.filter(l => !clearLetters.includes(l));
 
-    console.log(clearLetters, removedLetters);
-
     removedLetters.forEach(l => {
         if(l.classList.contains('empty')) {
             l.letter.emptyLetter = undefined;
